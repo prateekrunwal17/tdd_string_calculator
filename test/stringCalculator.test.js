@@ -17,5 +17,9 @@ describe('String Calculator', () => {
   it('should return the sum of multiple comma-separated numbers', () => {
     expect(add("1,2,3")).to.equal(6);
   });
+
+  it('should handle newlines as delimiters', () => {
+    expect(add("1\n2,3")).to.equal(6);
+  });
   
 });
