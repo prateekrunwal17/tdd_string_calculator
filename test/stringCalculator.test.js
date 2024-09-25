@@ -21,5 +21,9 @@ describe('String Calculator', () => {
   it('should handle newlines as delimiters', () => {
     expect(add("1\n2,3")).to.equal(6);
   });
+
+  it('should throw an exception when multiple negative numbers are provided', () => {
+    expect(() => add("1,-2,-3")).to.throw("Negative numbers not allowed: -2,-3");
+  });
   
 });
